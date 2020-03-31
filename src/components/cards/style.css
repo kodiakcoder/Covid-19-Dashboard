@@ -1,0 +1,28 @@
+.cardBody
+{
+text-align: center;}
+
+.header
+{
+    text-align:center;
+    background-color: #A5D8DD !important;
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+.card
+{
+    width: 17rem;
+    margin:5px;
+}
+
+.cardText
+{
+    text-align: center;
+}
+
+
+.button
+{
+    background-color: #0091D5 !important;
+}

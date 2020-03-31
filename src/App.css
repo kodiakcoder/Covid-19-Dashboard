@@ -1,0 +1,16 @@
+.searchBar
+{
+    text-align: center;
+}
+
+input.searchBar.form-control {
+    text-align: center !important;
+}
+
+.switch-wrapper {
+    position: relative;
+  }
+   
+  .switch-wrapper > div {
+    position: absolute;
+  }
