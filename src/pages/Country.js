@@ -14,7 +14,7 @@ const Country = ({match, location}) =>{
     //TODO: Start from the date when infection rate is 1 or higher
     countryData.forEach(day => {
         //const obj = {date: day.date, infected: day.confirmed}
-        const obj = {date: day.date, infected: day.confirmed}
+        const obj = {date: day.date, infected: day.confirmed,deaths: day.deaths}
         //countryData[0].push([ day.date,day.confirmed])
         //const val = day.date.substring(day.date.indexOf('-')+1)
         //const date = val[1].join
@@ -47,7 +47,9 @@ const Country = ({match, location}) =>{
                 <Col md={8}>
                 <ResponsiveContainer width="100%" height={500}>
                 <LineChart data={countryDates}  margin={{top: 15, right: 15, bottom: 15, left:50 }}>
-                    <Line type="monotone" dataKey="infected" stroke="#8884d8"/>
+                    <Line type="monotone" dataKey="infected" stroke="#FFC107"/>
+                    <Line type="monotone" dataKey="deaths" stroke="#DC3545"/> 
+
                     <CartesianGrid stroke="#ccc" strokeDasharray="3 3"/>
                     <XAxis dataKey="date" >
                         <Label value="Date" offset={0} position="bottom"/>

@@ -14,7 +14,7 @@ const App = () =>
         <BrowserRouter>
             <AnimatedSwitch atEnter={{opacity:0}} atLeave={{opacity:0}} atActive={{opacity:1}} className="switch-wrapper">
                 <Route exact={true} path="/" component={Home} />
-                <Route path="/:countryName" component={Country} />
+                <Route path="/country/:countryName" component={Country} />
                 <Route path="/loader" component={Loader} />
             </AnimatedSwitch>
         </BrowserRouter>

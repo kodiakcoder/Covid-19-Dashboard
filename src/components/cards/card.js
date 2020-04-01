@@ -19,7 +19,7 @@ return(
                 <strong>Recovered:</strong> {recovered} <br/>
                 <strong>Deaths:</strong> {dead}
             </Card.Text>
-            <Link to={{pathname:`/${country}`,state:{countryData}}}>
+            <Link to={{pathname:`/country/${country}`,state:{countryData}}}>
                 <Button className="button" onClick={onClick}>View Timeline</Button>
             </Link>
         </Card.Body>
