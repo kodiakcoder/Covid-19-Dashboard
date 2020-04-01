@@ -7,13 +7,13 @@ const Header = ({goBackButton = false,pageTitle}) =>
     let history = useHistory()
 
     const backButtonStyle = {
-        visibility:'hidden',
+        display:'none',
         color:'white',
-        textAlign:'center',
+        //textAlign:'center',
     }
     if(goBackButton )
     {
-        backButtonStyle.visibility ='visible'
+        backButtonStyle.display ='block'
     }
 
     const handleGoBack =() =>{

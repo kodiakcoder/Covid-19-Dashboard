@@ -6,6 +6,8 @@ import { AnimatedSwitch} from 'react-router-transition';
 import Loader from './components/Loader/Loader';
 import './App';
 
+//TODO: PropTypes
+
 const App = () =>
 {
     return(

@@ -22,7 +22,7 @@ const Home = () =>{
       setTimeout(() => {
         setIsLoading(false)
         
-      },0)
+      },2000)
       //console.log(countryData)
       
       }

@@ -7,16 +7,27 @@ import SideCard from '../components/sideCard/SideCard';
 const Country = ({match, location}) =>{
     const {params: {countryName}} = match
     const countryData = location.state.countryData
-    const pageTitle = `COVID-19 Data ${countryName}`
+    const pageTitle = `${countryName} COVID-19 Data`
     
     const countryDates = []
 
+    //TODO: Start from the date when infection rate is 1 or higher
     countryData.forEach(day => {
+        //const obj = {date: day.date, infected: day.confirmed}
         const obj = {date: day.date, infected: day.confirmed}
         //countryData[0].push([ day.date,day.confirmed])
+        //const val = day.date.substring(day.date.indexOf('-')+1)
+        //const date = val[1].join
+        //console.log(val)
         countryDates.push(obj)
         //console.log(obj)
+
+
     })
+
+    const infected = countryData[countryData.length-1].confirmed
+    const deaths = countryData[countryData.length-1].deaths
+    const recovered = countryData[countryData.length-1].recovered
 
     console.log(countryDates)
 
@@ -26,12 +37,12 @@ const Country = ({match, location}) =>{
     
 
     return(
-        <Container fluid>
-            <Header goBackButton={true} pageTitle={pageTitle}/>
+        <Container fluid style={{backgroundColor: '#F1F1F1',paddingBottom:100}} height={100}>
+            <Header pageTitle={pageTitle}/>
             <Row style={{marginTop:30}} className='align-items-center justify-content-center'>
                 <Col md={3} >
                     
-                    <SideCard />
+                    <SideCard infected={infected} deaths={deaths} recovered={recovered}/>
                 </Col>
                 <Col md={8}>
                 <ResponsiveContainer width="100%" height={500}>
